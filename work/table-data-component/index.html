@@ -22,13 +22,14 @@
     <link rel="canonical" href="https://jasondazey.com" />
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/app.css">
 
 </head>
 
 <body>
 
-
+     
 <div class="grid-container z-depth-8">
     <header class="top-bar">
         <!-- <div class="top-bar-left">
@@ -124,26 +125,24 @@
             <p class="copyright">Jason Dazey &copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear() );</script></p>
         </div>
     </footer>
-
+    
     <script type="text/javascript">
         element = document.getElementById('plane');
-
+    
         element.addEventListener('click', function(e){
             e.preventDefault;
             element.classList.add('takeoff');
-
+    
             setTimeout(function(){
                 element.classList.remove('takeoff');
                 element.offsetWidth = element.offsetWidth;
             }, 30 * 100);
         }, false);
-
+    
     </script>
 </div>
 
 
-
-    <!-- <script src="../../assets/js/app.js"></script> -->
 
 </body>
 
