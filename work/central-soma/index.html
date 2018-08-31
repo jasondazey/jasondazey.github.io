@@ -32,11 +32,13 @@
      
 <div class="grid-container z-depth-8">
     <header class="top-bar">
-        <!-- <div class="top-bar-left">
-            <div class="hamburger">
-                <div class="menu-icon"></div>
+        <div class="top-bar-left">
+            <div class="hamburger" data-toggle="offCanvasLeftOverlap">
+                <div class="menu-toggle">
+                    <div class="menu-icon"></div>
+                </div>
             </div>
-        </div> -->
+        </div>
         <div class="top-bar-left">
             <h3 class="site-name"><a href="/">Jason Dazey</a></h3>
         </div>
@@ -137,7 +139,18 @@
         </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js"></script>
     <script type="text/javascript">
+    
+        (function($){
+            "use strict";
+    
+            $(function(){
+                $(document).foundation();
+            });
+        })(jQuery);
+    
         element = document.getElementById('plane');
     
         element.addEventListener('click', function(e){
@@ -151,6 +164,34 @@
         }, false);
     
     </script>
+</div>
+
+<div id="offCanvasLeftOverlap" class="off-canvas position-left global-menu" data-off-canvas data-transition="overlap" data-content-scroll="false" data-auto-focus="false">
+    <div class="offCanvasClose hamburger" data-close>
+        <div class="menu-icon"></div>
+    </div>
+
+    <div class="navigation">
+
+            <ul class="vertical menu side-menu">
+                <li><a href="../../assets/pdf/jason-dazey-resume.pdf" target="_blank">Résumé</a></li>
+                <li><a href="mailto:hello@jasondazey.com" title="Say Hello!">Contact</a></li>
+            </ul>
+
+            <ul class="vertical menu main-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+
+                <li class="divider"></li>
+
+                <li><a href="/work/onboarding" class="card-action">Onboarding site</a></li>
+                <li><a href="/work/relocation-story" class="card-action">Relocation story</a></li>
+                <li><a href="/work/weekly-email" class="card-action">Weekly email</a></li>
+                <li><a href="/work/central-soma" class="card-action">Central SoMa</a></li>
+
+            </ul>
+
+    </div>
 </div>
 
 
