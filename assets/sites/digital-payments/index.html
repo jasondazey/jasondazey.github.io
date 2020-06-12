@@ -1,0 +1,654 @@
+
+<!doctype html>
+<html lang="en" class="view html5-player">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <base id="cerosBase">
+
+        <script type="text/javascript">
+            (function () {
+                var locationWithNoQuery = document.location.href.split('?')[0].split('#')[0];
+                locationWithNoQuery = locationWithNoQuery.replace(/[><\(\)'"]/g,'');
+
+                if (document.location.pathname.match(/\.html$/)) {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/[^\/]*\.html$/, '');
+                } else {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/(\/p|\/page)\/[a-z0-9-]*\/?$/, '/');
+                }
+
+                document.getElementById('cerosBase').href = window.cerosBaseUrl;
+            })();
+        </script>
+
+
+        <script type="text/javascript" src="assets/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/webfont-1.6.3.js"></script>
+
+    <script type="text/javascript">
+        window.cerosContext = {
+        viewAssetsDomain    : '',
+            publicAssetsBaseUrl: 'assets/',
+            isEmbedded: top != window,
+            isVanityDomain: location.hostname !== 'view.ceros.com',
+            previewMode: false,
+            logging: {
+            emitDevWarnings : false,
+                modes: {
+                        'debug': false,
+                        'info': false,
+                        'warn': true,
+                        'error': true
+                }
+            },
+            usePageSlugsInNavigation: false,
+            usePreviewBanner: false,
+            useDocumentLoadingSpinner: true,
+            analyticsApplicationKey: 'player',
+            analyticsMaxDwellTime: 1800,
+            analyticsUrl: '',
+            apiVersion: 'v1',
+            revalidateWithCore: false,
+
+            ajaxCaching: true,
+        mediaDomainMap: null,
+            rollbarPlayerAccessKey: '61d7450b926c4268b5f89b75862f33a9',
+            deploymentName: 'prod',
+            appVersion: '6.15.0',
+            rollbarMaxItems: 5,
+        isExported: true,
+            isStudio: false,
+
+            openGraphUrl: '',
+            accountSlug: 'williamblair',
+        gracePeriodExpired  : 9223372036854775807 < Date.now() / 1000,
+            appSlug: 'investment-management',
+            issueAliasSlug: 'digital-payments',
+            issue: {"id":306561,"title":"Why We\u2019re Paying Close Attention to Digital Payments | William Blair","name":"Why We\u2019re Paying Close Attention to Digital Payments | William Blair","slug":"experience-5e2f3c317b1fa","status":"published","projectId":25303,"wipExperienceVersionId":994472,"publishedExperienceVersionId":1021312,"createdByMemberId":12318,"primaryIssueAliasId":425835,"creationDate":"Mon, 27 Jan 2020 14:38:25 -0500","lastModifiedDate":"Wed, 20 May 2020 17:53:18 -0400","firstPublishedDate":"Fri, 14 Feb 2020 12:27:32 -0500","firstPageThumbnailUrl":"\/\/media-s3-us-east-1.ceros.com\/williamblair\/studio-thumbnails\/page-5e2f3c3180a7e.jpg","importLinkShared":false,"lastPublishedDate":"Fri, 14 Feb 2020 12:33:18 -0500","lastModifiedByMemberId":12318,"lastPublishedByMemberId":8677,"passwordProtected":false,"isTemplate":false,"htmlLanguage":"en"},
+            docVersion: {"id":1021312,"slug":"experience-version-5e46d9de3c7ff","loadLowRes":true,"seoNoIndex":false,"committedJsonUrl":"http:\/\/media-s3-us-east-1.ceros.com\/williamblair\/doc-version-json\/v11\/experience-version-5e46d9de3c7ff.js","seoTitleKeywords":"Global Payments, Investors, Ecosystem, Digital, Money, Credit","seoMetaDescription":"Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors.","canonicalUrlOverride":"https:\/\/insight.williamblair.com\/digital-payments","editorPagesManifest":[{"uri":"\/v1\/account\/williamblair\/pages\/page-5e46d9de3c817","initiallyDisabled":false,"overrides":{"mobile":{"initiallyDisabled":false}},"thumbnail":"media\/0a54e2493df381d9a2dbd92e5e497dfb\/page-thumbnail.jpg"}],"seoNoscriptHtml":"","customerBodyHtml":"<!-- play\/pause videos when embedded in a popup -->\n<script src=\"https:\/\/s3.amazonaws.com\/ceros-creative-services\/williamblair\/vimeoapi\/vimeoControls.js\"><\/script>","experienceId":306561,"committedByMemberId":8677,"creationDate":"Fri, 14 Feb 2020 12:33:18 -0500","modifiedDate":"Fri, 14 Feb 2020 12:33:18 -0500","publishedDate":"Fri, 14 Feb 2020 12:33:18 -0500","unsupportedBrowserRedirectUrl":"","ogTitle":"Why We\u2019re Paying Close Attention to Digital Payments","ogDescription":"Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors.","ogImageUrl":"https:\/\/media-s3-us-east-1.ceros.com\/williamblair\/images\/2020\/02\/12\/dcf5fb8316fe3f2afadee77a7e62cccd\/william-blair-two-women-at-restaurant-credit-card-payment-facebook.jpg","twitterTitle":"Why We\u2019re Paying Close Attention to Digital Payments","twitterDescription":"Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors.","twitterImageUrl":"https:\/\/media-s3-us-east-1.ceros.com\/williamblair\/images\/2020\/02\/12\/a45e92826c6591a47461994a810e78e1\/william-blair-two-women-at-restaurant-credit-card-payment-twitter.jpg","twitterHandle":"@WilliamBlairIM","lazyLoading":false,"forceLineMode":false,"pageNamesInTitle":false,"layoutSettings":{"layoutPrimarySetting":"device-type","maxTabletWidthBreakpoint":1280,"maxMobileWidthBreakpoint":800,"deviceTypeMissingVariantFallback":"mobile"},"carousel":{"enabled":false,"autoTransition":0,"autoTransitionDelay":5},"theming":{"arrowsEnabled":true,"swipeEnabled":true,"menuEnabled":false,"backgroundColor":"#FFFFFF","menuFgColor":"#FFFFFF","menuBgColor":"#000000","backgroundImage":null}},
+            fontManifest: {"Google|Roboto|400|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":"400","fontStyle":"normal","unitsPerEm":"2048","ascent":"1536","variantGuid":"Google|Roboto|400|normal","variantName":"Normal","cssFileURL":null,"cssFamilyName":"Roboto","crossAccount":false,"api":"Google","woffFileURL":null},"Uploaded|36e8d6b5-a250-11e8-88f3-0e55d9bc9e68":{"familyName":"Chronicle Display Light","familyGuid":"Uploaded|352e3347-a250-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"800","variantGuid":"Uploaded|36e8d6b5-a250-11e8-88f3-0e55d9bc9e68","variantName":"CHRONICLEDISP-LIGHT","cssFileURL":"fonts\/11bbf147-c394-4009-a597-fe44abac06aa\/chronicledisp-light.css","cssFamilyName":"Chronicle Display Ligh-vKioYZRI","crossAccount":false,"api":"Uploaded"},"Uploaded|352e54bf-a250-11e8-88f3-0e55d9bc9e68":{"familyName":"Chronicle Display Light","familyGuid":"Uploaded|352e3347-a250-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"800","variantGuid":"Uploaded|352e54bf-a250-11e8-88f3-0e55d9bc9e68","variantName":"CHRONICLEDISP-LIGHTITAL","cssFileURL":"fonts\/b217f7c7-af65-4bab-a9c4-87518b1a5037\/chronicledisp-lightital.css","cssFamilyName":"Chronicle Display Ligh-jJNmyIYQ","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b06ec3-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b06ec3-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BLACK","cssFileURL":"fonts\/66191040-54a7-4370-a21b-4a9fa76c0cca\/sourcesanspro-black.css","cssFamilyName":"Source Sans Pro-BLACK-PR52b9CC","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b07eb2-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b07eb2-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BLACK (1","cssFileURL":"fonts\/69281c95-c9b8-4054-aed3-bb31dcfea008\/sourcesanspro-black-1.css","cssFamilyName":"Source Sans Pro-BLACK -faZ1EYbn","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b09d0b-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b09d0b-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BLACKIT","cssFileURL":"fonts\/343b0085-40e6-49ac-984b-2b2fb7ee4b61\/sourcesanspro-blackit.css","cssFamilyName":"Source Sans Pro-BLACKI-259NYjZg","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0ce7d-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0ce7d-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BLACKIT (1","cssFileURL":"fonts\/7f94e307-d1ed-44ae-83ec-1fc36236bacf\/sourcesanspro-blackit-1.css","cssFamilyName":"Source Sans Pro-BLACKI-RQFpfyYa","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0739c-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0739c-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BOLD","cssFileURL":"fonts\/be3e1790-dfa7-4948-a1d4-f8e998af49e2\/sourcesanspro-bold.css","cssFamilyName":"Source Sans Pro-BOLD-RxkmwWap","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b085d1-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b085d1-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BOLD (1","cssFileURL":"fonts\/7ccf4cfe-e9cd-443d-a051-1d2414a1ce55\/sourcesanspro-bold-1.css","cssFamilyName":"Source Sans Pro-BOLD (-yz8oLfE0","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b09865-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b09865-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BOLDIT","cssFileURL":"fonts\/bb98b091-bbf5-4ec4-b727-962fe59908af\/sourcesanspro-boldit.css","cssFamilyName":"Source Sans Pro-BOLDIT-jpoliVWi","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0bbc6-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0bbc6-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BOLDIT (1","cssFileURL":"fonts\/cf1bcbee-6e22-458f-9015-e88bfa51e1c9\/sourcesanspro-boldit-1.css","cssFamilyName":"Source Sans Pro-BOLDIT-VmqwtT7z","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0760f-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0760f-3d30-11e8-88f3-0e55d9bc9e68","variantName":"EXTRALIGHT","cssFileURL":"fonts\/c016bd42-4d01-4094-976c-eef54c38e759\/sourcesanspro-extralight.css","cssFamilyName":"Source Sans Pro-EXTRAL-hjGXGcFS","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b08b87-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b08b87-3d30-11e8-88f3-0e55d9bc9e68","variantName":"EXTRALIGHT (1","cssFileURL":"fonts\/14fb556f-a8b3-42b1-ba99-c59408a0db27\/sourcesanspro-extralight-1.css","cssFamilyName":"Source Sans Pro-EXTRAL-eLLBV5eU","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0b5e1-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0b5e1-3d30-11e8-88f3-0e55d9bc9e68","variantName":"EXTRALIGHTIT","cssFileURL":"fonts\/800e279e-fb08-410b-ac8b-0f0dda6478ea\/sourcesanspro-extralightit.css","cssFamilyName":"Source Sans Pro-EXTRAL-lAfUtsG0","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0d81b-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0d81b-3d30-11e8-88f3-0e55d9bc9e68","variantName":"EXTRALIGHTIT (1","cssFileURL":"fonts\/57265e94-a60b-4fa6-aa6a-52ba66e1264b\/sourcesanspro-extralightit-1.css","cssFamilyName":"Source Sans Pro-EXTRAL-Mw72RTms","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0a40e-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0a40e-3d30-11e8-88f3-0e55d9bc9e68","variantName":"IT","cssFileURL":"fonts\/657193a5-b481-43d1-b5d4-f9d8e55aeb9e\/sourcesanspro-it.css","cssFamilyName":"Source Sans Pro-IT-m4OCPhsZ","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0d0e5-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0d0e5-3d30-11e8-88f3-0e55d9bc9e68","variantName":"IT (1","cssFileURL":"fonts\/49ea11d6-90b0-4713-9eb3-69b391c1ff85\/sourcesanspro-it-1.css","cssFamilyName":"Source Sans Pro-IT (1-K6ViM8Ck","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b07bdc-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b07bdc-3d30-11e8-88f3-0e55d9bc9e68","variantName":"LIGHT","cssFileURL":"fonts\/f4218ec5-87fd-4460-a8a0-cc7126a369a7\/sourcesanspro-light.css","cssFamilyName":"Source Sans Pro-LIGHT-8Zi0w3kH","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b08ec5-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b08ec5-3d30-11e8-88f3-0e55d9bc9e68","variantName":"LIGHT (1","cssFileURL":"fonts\/8745304a-e3fb-4bf4-9485-8a23d219d6b1\/sourcesanspro-light-1.css","cssFamilyName":"Source Sans Pro-LIGHT -EtuScvhW","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0b11a-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0b11a-3d30-11e8-88f3-0e55d9bc9e68","variantName":"LIGHTIT","cssFileURL":"fonts\/a0012746-9d2c-4000-b198-f5625c8bce89\/sourcesanspro-lightit.css","cssFamilyName":"Source Sans Pro-LIGHTI-I9ODeyXf","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0df33-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0df33-3d30-11e8-88f3-0e55d9bc9e68","variantName":"LIGHTIT (1","cssFileURL":"fonts\/20459e7e-e31c-4756-a3ff-2322769a4138\/sourcesanspro-lightit-1.css","cssFamilyName":"Source Sans Pro-LIGHTI-YZSGBCQO","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0a99b-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0a99b-3d30-11e8-88f3-0e55d9bc9e68","variantName":"REGULAR","cssFileURL":"fonts\/3c2c17b9-09ac-4e40-8b39-c4e1aa0c175d\/sourcesanspro-regular.css","cssFamilyName":"Source Sans Pro-REGULA-s5MCKeab","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0c773-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0c773-3d30-11e8-88f3-0e55d9bc9e68","variantName":"REGULAR (1","cssFileURL":"fonts\/f1add42f-a9ad-4a84-bfec-ec87b6980c52\/sourcesanspro-regular-1.css","cssFamilyName":"Source Sans Pro-REGULA-0FY9CIj8","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0836c-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0836c-3d30-11e8-88f3-0e55d9bc9e68","variantName":"SEMIBOLD","cssFileURL":"fonts\/aa8708f0-04a6-466c-9b2a-a055e88ecda7\/sourcesanspro-semibold.css","cssFamilyName":"Source Sans Pro-SEMIBO-GKvKTlUi","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b09399-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b09399-3d30-11e8-88f3-0e55d9bc9e68","variantName":"SEMIBOLD (1","cssFileURL":"fonts\/6edb189f-f789-4eb7-a1c4-10e8ea79942c\/sourcesanspro-semibold-1.css","cssFamilyName":"Source Sans Pro-SEMIBO-EAPQYWSJ","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0c2a2-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0c2a2-3d30-11e8-88f3-0e55d9bc9e68","variantName":"SEMIBOLDIT","cssFileURL":"fonts\/234e046a-31e1-4100-9fc7-6ec3db00210d\/sourcesanspro-semiboldit.css","cssFamilyName":"Source Sans Pro-SEMIBO-sVQfFLni","crossAccount":false,"api":"Uploaded"},"Uploaded|d5b0d31d-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Source Sans Pro","familyGuid":"Uploaded|d3ccfa85-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":"1000","ascent":"750","variantGuid":"Uploaded|d5b0d31d-3d30-11e8-88f3-0e55d9bc9e68","variantName":"SEMIBOLDIT (1","cssFileURL":"fonts\/586b589d-04bf-4586-bff6-bb5e799b8429\/sourcesanspro-semiboldit-1.css","cssFamilyName":"Source Sans Pro-SEMIBO-6y1NtMlq","crossAccount":false,"api":"Uploaded"}},
+        whiteLabeling   : true,
+        isTrialAccount      : false,
+        allowCommerceIntegration  : false,
+        allowEmbeddedPlayerSdk    : true,
+        allowAdaptiveLayouts: true,
+            commerceSettings: {
+            panelWidth      : null,
+            panelHeight     : null,
+                productUrl: '',
+                shoppingCartUrl: '',
+            },
+                themeObj: {
+                arrowsEnabled    : true,
+                swipeEnabled     : true,
+                menuEnabled      : false,
+                    menuFgColor: '#FFFFFF',
+                    menuBgColor: '#000000',
+                    menuHoverOpacity: 0.6,
+                    backgroundColor: '#FFFFFF',
+                backgroundImage  :
+                        null
+
+                },
+            googleFontUrl: '',
+            featureFlags: {"Password Protected Experiences":true,"Getty Image Integration":true,"Getty Video Integration":false,"Accessibility":false},
+            analyticsTrackers: {
+                cerosPlayerTracker: {enabled: true },
+                googleAnalyticsTracker: {"enabled":true,"trackingID":"UA-26604887-13","trackPageViewsForStandaloneExperiences":true,"eventCategory":"ceros-event","trackClicks":true,"clickEventAction":"ceros-click","trackHovers":true,"hoverEventAction":"ceros-hover"},
+                googleTagManagerTracker: {"enabled":false},
+                marketoTracker: {enabled: false, accountId: '' },
+                eloquaTracker: {enabled: false, siteId: '', cookieDomain: ''}
+            }
+        };
+    </script>
+
+    <!--
+      DISPLAY SETTINGS
+    -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="monitor-signature" content="monitor:player:html5"/>
+
+    <title>Why We’re Paying Close Attention to Digital Payments | William Blair Global Payments, Investors, Ecosystem, Digital, Money, Credit</title>
+
+
+
+        <meta name="description" content="Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors."/>
+
+    <meta property="og:title" content="Why We’re Paying Close Attention to Digital Payments"/>
+        <meta property="og:image" content="https://media-s3-us-east-1.ceros.com/williamblair/images/2020/02/12/dcf5fb8316fe3f2afadee77a7e62cccd/william-blair-two-women-at-restaurant-credit-card-payment-facebook.jpg"/>
+    <meta property="og:description" content="Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors."/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Why We’re Paying Close Attention to Digital Payments">
+    <meta name="twitter:description" content="Read the 6 Compelling Aspects of the Global Payments Industry for Active Investors.">
+        <meta name="twitter:image" content="https://media-s3-us-east-1.ceros.com/williamblair/images/2020/02/12/a45e92826c6591a47461994a810e78e1/william-blair-two-women-at-restaurant-credit-card-payment-twitter.jpg">
+        <meta name="twitter:site" content="@WilliamBlairIM">
+
+    <script language="Javascript" id="docversion-request-script">
+        window.docVersionRequest = window.jQuery.ajax({
+            url           : "media/experience-version-5e46d9de3c7ff.js",
+            dataType      : 'jsonp',
+            jsonp         : false, 
+            cache         : true,  
+            jsonpCallback : "loadDocVersion_v1_account_williamblair_document_versions_experience_version_5e46d9de3c7ff",
+            success       : window.jQuery.noop 
+        });
+    </script>
+
+    <!--
+      FONTS
+    -->
+
+    
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    if (top === window) {
+      ga('create', 'UA-26604887-13', 'auto');
+    }
+    </script>
+    
+
+
+
+    <script type="text/javascript">
+        window.cerosPlayerLoadStart = new Date();
+    </script>
+
+    <script
+            type="text/javascript"
+            crossorigin="anonymous"
+            src="assets/player/shared/libs/require/require-min.b03b66057d7df9b2cc9aa9c4c18aa569.js">
+    </script>
+
+    <script
+            type="text/javascript"
+            async
+            crossorigin="anonymous"
+            charset="UTF-8"
+            src="assets/player/applications/html5-player/bootstrap-optimized.edeaf5c65cc5884846d51884e6e1ed6d.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/player/applications/html5-player/css/html5-player.29da70e4e6644f09a6310b57463cab3b.css"/>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        body:-ms-fullscreen::-ms-backdrop {
+            background-color: #FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+
+    <noscript>
+        
+            <div id="page-5e46d9de3c817" class="page"><img src="media/2bce253078e69708d9ad0daf9bd43b6d/william-blair-logo-negative-01.svg" alt="" id="" class="image-component" />
+<img src="media/ddcafbb2dc2fffb6bf90415075825a50/payments-issuer.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$0.35</div>
+<div id="" class="text-component">26%</div>
+<div id="" class="text-component">Brazil</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">1,700</div>
+<div id="" class="text-component">Inventory Management</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Issuers: Banks that issue credit and debit cards and issuer processors that are either internal functions within banks or external partners.</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">2</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Merchant Acquirer: Entities that create software and protocols that make it possible for merchants to accept credit cards and other forms of digital payments.</div>
+<div id="" class="text-component">United Kingdom</div>
+<div id="" class="text-component">The merchant acquirer’s software and hardware allow the purchase to be initially accepted.</div>
+<img src="media//-full." alt="" id="" class="image-component" />
+<img src="media/aff63aaba458bcdd45d650936f18a74f/payments-issuer-processor.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Attractive business models can generate solid cash flow and high operating profit, with low capex requirements supporting dividends, buybacks, M&A, and low-volatility returns.</div>
+<div id="" class="text-component">This hypothetical example illustrates the flow of money when a consumer makes a $100 purchase at a department store using a credit card. The fees shown here represent typical amounts for U.S. in-store purchases.</div>
+<div id="" class="text-component">61%</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5</div>
+<img src="media/37b5fc5506013279d222a28ed9d83bfa/2965922-01-full.png" alt="" id="" class="image-component" />
+<div id="" class="text-component">Profit margins that are already attractive can grow further due to high operating leverage derived from a largely fixed cost base. Scale is key in the industry.</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Credit cards are extremely popular among Brazilian consumers, but merchants must wait up to 30 days to receive their payments.</div>
+<div id="" class="text-component">5</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/bb28268724b0f224ff434a108597801f/2020-from-nolan-merchant.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">The digital payments industry represents a truly enormous addressable market that continues to expand due to strong, durable secular tailwinds. These drivers include the growth of e-commerce, consumer preference for cashless transactions, the opportunity for payments providers to add value for small and medium-sized businesses (SMBs), and governmental support of digital payments. Many analysts estimate global business-to-consumer (B2C) digital payments volumes to be more than $30 trillion; the undeveloped business-to-business (B2B) payments market represents even greater potential.</div>
+<div id="" class="text-component">India</div>
+<div id="" class="text-component">Network</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">A message is sent back through the network to the merchant acquirer authorizing the transaction, and the consumer’s purchase is completed.</div>
+<div id="" class="text-component">5</div>
+<img src="media/c1bb5870a1d2a340c27e07e57dfb6c45/payments-merchant-acquirer.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5. Disruption Concerns May Be Overstated</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">Start the journey</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Lending</div>
+<div id="" class="text-component">2%</div>
+<div id="" class="text-component">Leading payments companies are using data analytics, machine learning, and artificial intelligence to improve fraud prevention, acceptance rates, and targeted marketing for merchants of all sizes. These capabilities are especially valuable for small and medium-sized businesses (SMBs) when bundled with other core business functions as part of integrated payments systems.</div>
+<img src="media/622a9bd671d7221c149c831cae1a4e58/2020-from-nolan-credit-card.svg" alt="" id="" class="image-component" />
+<img src="media/ddcafbb2dc2fffb6bf90415075825a50/payments-issuer.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Cultural aversion to borrowing limits the current use of credit cards, but the government is pushing digital payments, targeting 40% penetration by 2023.</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Download report</div>
+<div id="" class="text-component">$1.50</div>
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">Alipay and Tenpay, which use a closed-loop system, currently capture more than 90% of China’s digital payments market.</div>
+<div id="" class="text-component">Network</div>
+<div id="" class="text-component">Sweden</div>
+<div id="" class="text-component">Japan</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Digital payments penetration in Scandinavia is among the highest in the world, a result of early adoption and the region’s culture.</div>
+<div id="" class="text-component">Germany</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">The merchant acquirer sends the transaction to the network, which authorizes the transaction and sends it to the issuer.</div>
+<div id="" class="text-component">61%</div>
+<div id="" class="text-component">Bitcoin</div>
+<div id="" class="text-component">Merchant</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">India is a sleeping giant in terms of digital payments, with a huge unbanked population. The government’s investment in building a real-time payment infrastructure has attracted major investments from the world’s largest fintech players.</div>
+<div id="" class="text-component">Despite having a highly advanced economy, digital payments adoption is low because of consumer behavior and the fact that one of the largest payment methods isn’t available online.</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Nearly 50% of Kenya’s GDP is processed via the country’s mobile-based M-Pesa payments system. This has helped push the percentage of Kenya’s population with access to formal banking services up 83%.</div>
+<div id="" class="text-component">Sources: For Brazil, China, and Kenya, Edgar, Dunn & Company, as of 2017. For other countries, company reports, MoffettNathanson estimates and analysis, Visa Investor Day, Nilson, IMF, World Bank, OECD, U.S. Bureau of Economic Analysis, U.S. National Health Expenditure Accounts, as of 2016.</div>
+<img src="media/bb28268724b0f224ff434a108597801f/2020-from-nolan-merchant.svg" alt="" id="" class="image-component" />
+<img src="media/aff63aaba458bcdd45d650936f18a74f/payments-issuer-processor.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Credit issuers charge high fees that help fund rewards and loyalty programs that are much more generous than what are offered in Europe.</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">$100</div>
+<img src="media/15b15a7621adebcb05fcc8a295a0f536/bitcoin-logo.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$0.35</div>
+<div id="" class="text-component">15%</div>
+<img src="media/fa7705b15e1b9423e7b2d781fa11e587/2020-from-nolan-fraud-protection.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">2%</div>
+<div id="" class="text-component">Cash is predominant, often as a means to avoid taxes. The government wants to accelerate digital payments penetration, but at a low cost to merchants.</div>
+<img src="media/3dcac64b32450132fba88ac80a3dd2b2/2020-from-nolan-omnichannel-experiences.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$0.15</div>
+<div id="" class="text-component">Transaction Volumes per Second: Bitcoin vs. Visa</div>
+<div id="" class="text-component">Acquirer / Processor Fee</div>
+<div id="" class="text-component">While digital payments penetration exceeds 40% globally, it varies significantly across regions and countries. Major variances in penetration rates—as well as marketplace, regulatory, and cultural differences—mean that the digital payments industry faces different growth trajectories and risks around the world. Click on the markers in the map below to learn more about these trends.</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">A consumer uses a credit card at a store to make a purchase.</div>
+<div id="" class="text-component">Receives</div>
+<div id="" class="text-component">The U.K. government, along with the broader European Union, has implemented interchange limits on issuers that are much lower than in the United States.</div>
+<div id="" class="text-component">1</div>
+<div id="" class="text-component">Despite having a highly advanced economy, digital payments adoption is low because of consumer behavior and the fact that one of the largest payment methods isn’t available online.</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Global Card Purchase Volume (Left Axis)
+Global Payment Card Penetration (Purchase Volume on Global Payment Card / Total Purchase Volume) (Right Axis)</div>
+<img src="media/f432fb0dad49f4ff214922daf628d4f4/arrow-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">2</div>
+<div id="" class="text-component">$1.50</div>
+<div id="" class="text-component">This hypothetical example illustrates the flow of money when a consumer makes a $100 purchase at a department store using a credit card. The fees shown here represent typical amounts for U.S. in-store purchases.</div>
+<div id="" class="text-component">Kenya</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">1</div>
+<img src="media/8a264c6c40557823651adc7ee0b8e599/2020-from-nolan-user.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">A consumer uses a credit card at a store to make a purchase.</div>
+<div id="" class="text-component">$0.15</div>
+<img src="media/bb28268724b0f224ff434a108597801f/2020-from-nolan-merchant.svg" alt="" id="" class="image-component" />
+<img src="media/7107d6c898a5dde06d97bc5440277cce/circle-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">1</div>
+<div id="" class="text-component">Merchant Acquirers</div>
+<div id="" class="text-component">India is a sleeping giant in terms of digital payments, with a huge unbanked population. The government’s investment in building a real-time payment infrastructure has attracted major investments from the world’s largest fintech players.</div>
+<div id="" class="text-component">Network Fee</div>
+<div id="" class="text-component">2</div>
+<img src="media/c1bb5870a1d2a340c27e07e57dfb6c45/payments-merchant-acquirer.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Merchant Acquirer: Entities that create software and protocols that make it possible for merchants to accept credit cards and other forms of digital payments.</div>
+<div id="" class="text-component">Acquirer / Processor Fee</div>
+<div id="" class="text-component">3</div>
+<img src="media/7107d6c898a5dde06d97bc5440277cce/circle-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">– Disclosures</div>
+<div id="" class="text-component">+ Disclosures</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">$98</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">February 2020   /   Investment Management</div>
+<div id="" class="text-component">3</div>
+<img src="media/7107d6c898a5dde06d97bc5440277cce/circle-icon.svg" alt="" id="" class="image-component" />
+<img src="media/7107d6c898a5dde06d97bc5440277cce/circle-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$98</div>
+<div id="" class="text-component">2</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">47%</div>
+<div id="" class="text-component">2</div>
+<div id="" class="text-component">$98</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$100</div>
+<div id="" class="text-component">$30
+$25
+$20
+$15
+$10
+$5
+0</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">Italy</div>
+<div id="" class="text-component">The issuer—either through an internal system or via a third-party processor—verifies that the consumer has sufficient credit available.</div>
+<div id="" class="text-component">Cultural aversion to borrowing limits the current use of credit cards, but the government is pushing digital payments, targeting 40% penetration by 2023.</div>
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">42%</div>
+<div id="" class="text-component">Digital Payments Penetration Around the World</div>
+<div id="" class="text-component">Fraud Prevention</div>
+<div id="" class="text-component">The near-term potential for digital currencies and blockchain to disrupt the payments industry is limited currently because the technology simply isn’t capable of handling the bandwidth needed to support any sort of systemic shift.</div>
+<div id="" class="text-component">Global Card Purchase Volume Growth</div>
+<div id="" class="text-component">2</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">Targeted Marketing</div>
+<div id="" class="text-component">Japan</div>
+<div id="" class="text-component">A</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">2. Global Industry Defined by Distinct Regional Trends</div>
+<div id="" class="text-component">Issuer
+Processor</div>
+<div id="" class="text-component">Issuers: Banks that issue credit and debit cards and issuer processors that are either internal functions within banks or external partners.</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<img src="media/729506df4832abe8b619bc2c4a5b4636/2020-from-nolan-payroll.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">26%</div>
+<img src="media/622a9bd671d7221c149c831cae1a4e58/2020-from-nolan-credit-card.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">United States</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Digital payments penetration in Scandinavia is among the highest in the world, a result of early adoption and the region’s culture.</div>
+<img src="media/c1bb5870a1d2a340c27e07e57dfb6c45/payments-merchant-acquirer.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">3</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Credit cards are extremely popular among Brazilian consumers, but merchants must wait up to 30 days to receive their payments.</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">60%</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">1. Massive Addressable Market With Sustainable Growth</div>
+<div id="" class="text-component">$0.15</div>
+<div id="" class="text-component">High-quality, visible, and sticky revenues are the result of stable pricing and persistent growth. Even during the 2008-2009 global financial crisis, non-cash payments increased by the mid-single digits.</div>
+<div id="" class="text-component">The payments industry has been valued at high multiples in recent years, reflecting durable, growing revenues and profit margins. We believe that this is a prime example of how high multiples do not necessarily equate to high valuations.</div>
+<div id="" class="text-component">The global payments industry is both highly complex and highly attractive. This creates opportunities for us as disciplined, fundamental managers to identify the aspects of the value chain that are best positioned to capitalize on the growing and shifting pools of profitability. 
+
+Learn how we are applying our rigorous, bottom-up approach to each segment of the payments industry and how we rank the relative attractiveness of the industry’s various business models.
+</div>
+<div id="" class="text-component">Management teams in the payments industry tend to be conservative with respect to future growth expectations, leaving the potential for earnings surprises to the upside.</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">Global Card Purchase Volume and Card Penetration (ex-China, Nominal, in Trillions)</div>
+<div id="" class="text-component">Source: WEO, World Bank, Nilson, corporate reports, Bernstein estimates, as of 2017.</div>
+<div id="" class="text-component">Close</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">United Kingdom</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Kenya</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">Merchant Acquirers</div>
+<div id="" class="text-component">Visa</div>
+<div id="" class="text-component">Merchant Discount Rate</div>
+<div id="" class="text-component">Network: The "pipes" or "rails" through which all transactions flow, connecting merchants and issuers.</div>
+<div id="" class="text-component">Close</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">16%</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<img src="media/8a264c6c40557823651adc7ee0b8e599/2020-from-nolan-user.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">4. High Multiples Reflect High Expectations—and May Be Too Conservative</div>
+<div id="" class="text-component">62%</div>
+<div id="" class="text-component">Issuer</div>
+<div id="" class="text-component">20%</div>
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">Pays</div>
+<img src="media/16d851cf79353d018d4c3634348dcfcf/man-holding-credit-card-and-using-cell-phone-holding-credit-card-with-shopping-online-image-full.jpg" alt="Man Holding Credit Card And Using Cell Phone holding credit card with shopping online" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">China</div>
+<div id="" class="text-component">60%</div>
+<div id="" class="text-component">26%</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Acquirer / Processor Fee</div>
+<div id="" class="text-component">$98</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Six Compelling Aspects of the
+Global Payments Industry for Active Investors</div>
+<div id="" class="text-component">$0.35</div>
+<div id="" class="text-component">4.6</div>
+<div id="" class="text-component">Interchange Fee</div>
+<img src="media/44e280febe07c7bf157e7d862e025902/2020-from-nolan-inventory-management.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">16%</div>
+<img src="media/1ab7c21cba3a7721e3c6f646b27b71e3/2020-from-nolan-targeted-marketing.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Why We’re Paying Close Attention to Digital Payments</div>
+<div id="" class="text-component">Nearly 50% of Kenya’s GDP is processed via the country’s mobile-based M-Pesa payments system. This has helped push the percentage of Kenya’s population with access to formal banking services up 83%.</div>
+<div id="" class="text-component">Network Fee</div>
+<img src="media/edcb926b6b953abc58f4d8aa79d5d58f/visa-inc-logo.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Consumer</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">30%</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">62%</div>
+<div id="" class="text-component">How Integrated Payments Systems Create Value for SMBs</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Credit issuers charge high fees that help fund rewards and loyalty programs that are much more generous than what are offered in Europe.</div>
+<div id="" class="text-component">                  s a consumer, you may not spend much time thinking about the series of connections and interactions
+                  that take place within a few seconds after you swipe your credit card, click “complete purchase,” or tap
+                  your smartphone. But as active investors, we believe that what goes on behind the scenes comprises a compelling opportunity that deserves our attention.
+</div>
+<div id="" class="text-component">Cash Flow</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">Sources: For Brazil, China, and Kenya, Edgar, Dunn & Company, as of 2017. For other countries, company reports, MoffettNathanson estimates and analysis, Visa Investor Day, Nilson, IMF, World Bank, OECD, U.S. Bureau of Economic Analysis, U.S. National Health Expenditure Accounts, as of 2016.</div>
+<div id="" class="text-component">The merchant acquirer sends the transaction to the network, which authorizes the transaction and sends it to the issuer.</div>
+<div id="" class="text-component">India</div>
+<div id="" class="text-component">Network: The "pipes" or "rails" through which all transactions flow, connecting merchants and issuers.</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">Interchange Fee</div>
+<div id="" class="text-component">Network</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Payroll</div>
+<div id="" class="text-component">6. Technology and Data Analytics Drive Growth</div>
+<div id="" class="text-component">Issuer
+Processor</div>
+<div id="" class="text-component">Merchant Discount Rate</div>
+<div id="" class="text-component">30%</div>
+<div id="" class="text-component">Cash is predominant, often as a means to avoid taxes. The government wants to accelerate digital payments penetration, but at a low cost to merchants.</div>
+<img src="media/c1bb5870a1d2a340c27e07e57dfb6c45/payments-merchant-acquirer.svg" alt="" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Receives</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Network</div>
+<div id="" class="text-component">Pursuing Sustainable Value Creation in Payments</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">The issuer—either through an internal system or via a third-party processor—verifies that the consumer has sufficient credit available.</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">5</div>
+<div id="" class="text-component">We believe that many investors are overestimating the near- and medium-term disruption risk facing payment networks. The existing networks are firmly entrenched, efficient, inexpensive, safe, and reliable. In other words, there is nothing overpriced or inefficient about the current system that would make it ripe for disruption. Over the longer term, alternatives such as blockchain, real-time payments, and other models may have the potential to take volume from the existing networks, but many of the networks are preparing for this risk and using their powerful balance sheets to invest in alternative systems.</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">China</div>
+<img src="media/622a9bd671d7221c149c831cae1a4e58/2020-from-nolan-credit-card.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">6%</div>
+<div id="" class="text-component">The global payments ecosystem consists of three primary components: merchant acquirers, networks, and issuers. While it is useful to think about these three components separately, they are far from siloed. Many payments companies operate in more than one segment, and the lines have blurred significantly in recent years. Payments companies are looking for economies of scale as well as economies of data that can result from having access to information about transactions and consumers generated from more than one segment of the payments chain.</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">5</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">United States</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Margins</div>
+<div id="" class="text-component">6%</div>
+<div id="" class="text-component">Network Fee</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">60%
+50%
+40%
+30%
+20%
+10%
+0</div>
+<img src="media/a1901538d0331b4cacfd72bbcbcae767/2020-from-nolan-lending.svg" alt="" id="" class="image-component" />
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">How Money Flows Through the Digital Payments Ecosystem</div>
+<img src="media/bb28268724b0f224ff434a108597801f/2020-from-nolan-merchant.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">3. Complex Ecosystem Worth Understanding</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">Download report</div>
+<div id="" class="text-component">20%</div>
+<div id="" class="text-component">Omnichannel
+Experiences</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">2</div>
+<div id="" class="text-component">2012 - 2017 CAGR = 10%
+2017 - 2022E CAGR = 9%</div>
+<div id="" class="text-component">Source: Hacknoon. “The Blockchain Scalability Problem & the Race for Visa-Like Transaction Speed.” October 14, 2019.</div>
+<div id="" class="text-component">Acceptance Rates</div>
+<div id="" class="text-component">Fundamental Perspectives</div>
+<div id="" class="text-component">52%</div>
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">2009</div>
+<div id="" class="text-component">A message is sent back through the network to the merchant acquirer authorizing the transaction, and the consumer’s purchase is completed.</div>
+<div id="" class="text-component">Germany</div>
+<img src="media/9387104b402f4f1dffbb6dcf056ddb5f/imjs-globalpayment-2560x1360-full.jpg" alt="Waitress Charging Customers Bill With A Credit Card Terminal" id="" class="image-component" />
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">32%</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Close</div>
+<img src="media/33cf5651cf02426edecb652f4eb4837e/2020-from-nolan-acceptance-rates.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Driven by forces such as increased internet access and mobile phone adoption, the growth of e-commerce, government policy, as well as globalization and demographic trends, the ongoing shift toward noncash transactions benefits all segments of the global payments industry.</div>
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Earnings Guidance</div>
+<div id="" class="text-component">Close</div>
+<div id="" class="text-component">Four Pillars Supporting High Payments Multiples</div>
+<div id="" class="text-component">Revenue</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">How Money Flows Through the Digital Payments Ecosystem</div>
+<div id="" class="text-component">The U.K. government, along with the broader European Union, has implemented interchange limits on issuers that are much lower than in the United States.</div>
+<div id="" class="text-component">Brazil</div>
+<div id="" class="text-component">Back</div>
+<div id="" class="text-component">This hypothetical example illustrates the flow of money when a consumer makes a $100 purchase at a department store using a credit card. The fees shown here represent typical amounts for U.S. in-store purchases.</div>
+<div id="" class="text-component">15%</div>
+<div id="" class="text-component">2</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/622a9bd671d7221c149c831cae1a4e58/2020-from-nolan-credit-card.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Italy</div>
+<div id="" class="text-component">4</div>
+<div id="" class="text-component">1</div>
+<div id="" class="text-component">Network Fee</div>
+<div id="" class="text-component">Consumer</div>
+<div id="" class="text-component">Issuer</div>
+<img src="media/d95cdfc93fa5b199a156a1be1722d460/map-marker-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">Merchant Acquirers</div>
+<div id="" class="text-component">$0.15</div>
+<div id="" class="text-component">47%</div>
+<div id="" class="text-component">Acquirer / Processor Fee</div>
+<div id="" class="text-component">Receives</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<img src="media/6d11022d1b2111e1153aa13ef55cc17a/linkedin-logo.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Next</div>
+<div id="" class="text-component">Pays</div>
+<div id="" class="text-component">Merchant Acquirers</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Sweden</div>
+<div id="" class="text-component">Start the journey</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">back to top</div>
+<div id="" class="text-component">2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018E
+2019E
+2020E
+2021E
+2022E</div>
+<div id="" class="text-component">Receives</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">$0.35</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Merchant</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Alipay and Tenpay, which use a closed-loop system, currently capture more than 90% of China’s digital payments market.</div>
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">The merchant acquirer’s software and hardware allow the purchase to be initially accepted.</div>
+<div id="" class="text-component">Merchant</div>
+<img src="media/9d5a3cb1c59ea4e5cfba6d819f8798f4/facebook.svg" alt="" id="" class="image-component" />
+<img src="media/b3ace2d54e500b81f7650bb29a7eeade/envelope-icon.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">Source: William Blair. For illustrative purposes only.</div>
+<img src="media/9d59ad8f9a19969a9cc139903264b835/twitter.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">1</div>
+<img src="media/7117dd1c8045b11f1ce8820b02f695c1/dotted-arrow-with-number.svg" alt="" id="" class="image-component" />
+<img src="media/be49ec5802a3e6222e157ae611966ac9/dotted-arrow-02.svg" alt="" id="" class="image-component" />
+<div id="" class="text-component">3</div>
+<div id="" class="text-component">Merchant</div>
+<div id="" class="text-component">1</div>
+<div id="" class="text-component">How Money Flows Through the Digital Payments Ecosystem</div>
+<div id="" class="text-component">This material is provided for information purposes only and is not intended as investment advice, offer, or a recommendation to buy or sell any particular security or product.
+
+This material is not intended to substitute a professional advice on investment in financial products and any investment or strategy mentioned herein may not be suitable for every investor.
+
+Any discussion of particular topics is not meant to be complete, accurate, comprehensive, or up-to-date and may be subject to change. Data shown does not represent and is not linked to the performance or characteristics of any William Blair Investment Management product or strategy. Factual information has been taken from sources we believe to be reliable, but its accuracy, completeness or interpretation cannot be guaranteed. Information and opinions expressed are those of the author and may not reflect the opinions of other investment teams within William Blair Investment Management. Information is current as of the date appearing in this material only and subject to change without notice. This material may include estimates, outlooks, projections and other forward-looking statements. Due to a variety of factors, actual events may differ significantly from those presented.
+
+Past performance is not indicative of future results. Investing involves risks, including the possible loss of principal.  References to specific securities and their issuers are for illustrative purposes only and are not intended as recommendations to purchase or sell such securities. 
+
+This material is distributed in the United Kingdom and the European Economic Area (EEA) by William Blair International, Ltd., authorized and regulated by the Financial Conduct Authority (FCA), and is only directed at and is only made available to persons falling within articles 19, 38, 47, and 49 of the Financial Services and Markets Act of 2000 (Financial Promotion) Order 2005 (all such persons being referred to as "relevant persons"). This document is distributed in Australia by William Blair Investment Management, LLC ("William Blair"), which is exempt from the requirement to hold an Australian financial services license under Australia's Corporations Act 2001 (Cth) pursuant to ASIC Class Order 03/1100. William Blair is registered as an investment advisor with the U.S. Securities and Exchange Commission ("SEC") and regulated by the SEC under the U.S. Investment Advisers Act of 1940, which differs from Australian laws. This document is distributed only to wholesale clients as that term is defined under Australia's Corporations Act 2001 (Cth). This material is not intended for distribution, publication, or use in any jurisdiction where such distribution or publication would be unlawful.
+</div>
+<div id="" class="text-component">William Blair & Company and the script logo are registered trademarks of William Blair & Company, L.L.C.
+© 2020 William Blair & Company, L.L.C. All rights reserved.  /  Member FINRA • Member SIPC</div></div>
+    </noscript>
+
+
+<div id="main"></div>
+<div id="backgroundContainer"></div>
+
+
+
+    <!-- BEGIN CUSTOM HTML -->
+    <!-- play/pause videos when embedded in a popup -->
+<script src="https://s3.amazonaws.com/ceros-creative-services/williamblair/vimeoapi/vimeoControls.js"></script>
+    <!-- END CUSTOM HTML -->
+
+
+
+
+</body>
+</html>
